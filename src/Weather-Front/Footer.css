@@ -1,0 +1,20 @@
+.Footer {
+    padding: 0 10px;
+}
+
+.Footer a {
+    color: rgb(155, 73, 231);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.Footer a:hover {
+    color: hotpink;
+}
+
+.Footer p {
+    color: rgb(155, 73, 231);
+    text-align: center;
+    font-weight: 600;
+    line-height: 1em;
+}

@@ -1,0 +1,64 @@
+.Sidebar {
+    width: 24%;
+    margin-left: 1%;
+    text-align: center;
+    background: linear-gradient(109.6deg,
+            rgb(43, 1, 91) 13.4%,
+            rgb(122, 2, 54) 100.2%);
+    border-radius: 45px 0 13px 0;
+    color: white;
+}
+
+.Sidebar button {
+    width: 70%;
+    margin-top: 7%;
+    padding: 6% 9%;
+    border-radius: 50px;
+    font-size: 21px;
+    border: none;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 1px rgb(157 99 205 / 89%);
+    box-shadow: 1px 1px 2px rgb(62, 62, 62);
+    background: linear-gradient(109.6deg,
+            rgb(61, 106, 239) 11.2%,
+            rgb(122, 14, 190) 70.2%);
+}
+
+.Sidebar .tooltip {
+    width: 100%;
+    position: relative;
+    padding: 2%;
+    font-size: 18px;
+    border-radius: inherit;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.Sidebar .credit {
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    font-weight: 900;
+    color: rgb(255, 82, 148);
+    text-shadow: 1px 1px 2px #0011c9;
+    /* background-image: url(./src/media/cloud.jpg); */
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+}
+
+.Sidebar.recent {
+    width: 60%;
+    margin: 15px auto;
+    padding-top: 7%;
+    line-height: 0.5em;
+    border: 2px solid rgb(199, 176, 255);
+}
+
+@media screen and (max-width: 600px) {
+    .Sidebar {
+        width: 100%;
+    }
+}
