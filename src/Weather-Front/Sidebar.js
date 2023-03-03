@@ -19,7 +19,7 @@ export default function Sidebar() {
         className="extra-info credit"
         style={{ backgroundImage: `url(${background})` }}
       >
-        <p>© Monika Singh 2022</p>
+        <p>© Monika Singh 2023</p>
       </div>
     </div>
   );
