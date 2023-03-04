@@ -22,7 +22,8 @@
     box-shadow: 0px 2px 3px rgb(210, 208, 208);
 }
 
-button:hover {
+button:hover,
+.Weather button:hover {
     background: rgb(138, 92, 255);
 }
 
@@ -58,7 +59,7 @@ button:hover {
     column-gap: 18px;
 }
 
-.temperature-wrapper {
+.city-weather-data {
     width: 90%;
     margin: 5% auto;
     display: flex;
@@ -96,7 +97,7 @@ button:hover {
     width: 120px;
 }
 
-#units {
+.units {
     position: relative;
     top: -15px;
     font-size: 20px;
