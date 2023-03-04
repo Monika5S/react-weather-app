@@ -76,6 +76,7 @@ export default function Weather() {
                     </a>
                     |
                     <a href="./" id="fahrenheit">
+                      {" "}
                       F
                     </a>
                   </span>
@@ -85,7 +86,7 @@ export default function Weather() {
                 </h2>
               </div>
 
-              <h4 id="date-time">{weatherData.date}</h4>
+              <h4 class="mt-2">{weatherData.date}</h4>
             </div>
 
             <div className="extra-info">
