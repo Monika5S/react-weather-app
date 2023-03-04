@@ -1,14 +1,6 @@
 .Weather {
-    width: 72%;
-    margin: 20px auto;
-    color: whitesmoke;
-    border: 3px solid rgb(101, 62, 197);
-    border-radius: 14px;
-    background: linear-gradient(109.6deg,
-            rgb(43, 1, 91) 13.4%,
-            rgba(122, 2, 54, 0.859) 100.2%);
-    font-family: "Poppins";
-    overflow: hidden;
+    width: 75%;
+    margin-top: 10px;
 }
 
 .Weather button.search,
@@ -22,6 +14,11 @@
     box-shadow: 0px 2px 3px rgb(210, 208, 208);
 }
 
+.Weather.loader {
+    display: flex;
+    justify-content: center;
+}
+
 button:hover,
 .Weather button:hover {
     background: rgb(138, 92, 255);
@@ -33,22 +30,6 @@ button:hover,
     font-size: 18px;
     border-radius: 50px;
     border: 1.5px solid rgb(138, 92, 255);
-}
-
-.Weather .content {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-end;
-}
-
-.content {
-    margin-top: 25px;
-}
-
-.main {
-    width: 75%;
-    margin-top: 10px;
 }
 
 .search-bar {
@@ -142,17 +123,14 @@ button:hover,
     opacity: 0.7;
 }
 
-@media screen and (max-width: 600px) {
-    .main {
+@media screen and (max-width: 676px) {
+    .Weather {
         width: 100%;
-    }
-
-    h1 {
-        text-align: center;
     }
 }
 
-@media screen and (max-width: 1118px) {
+
+@media screen and (max-width: 1100px) {
 
     .extra-info,
     .temperature {
