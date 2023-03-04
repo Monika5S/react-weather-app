@@ -18,7 +18,6 @@ export default function Weather() {
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
       humidity: response.data.main.humidity,
       windspeed: response.data.wind.speed,
-      feelsLike: Math.round(response.data.main.feels_like),
       date: new Date(response.data.dt * 1000),
     });
   }

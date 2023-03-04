@@ -25,7 +25,6 @@ export default function WeatherInfo(props) {
         </div>
 
         <div className="extra-info">
-          <p>Feels Like : {props.data.feelsLike}°</p>
           <p>Humidity : {props.data.humidity}%</p>
           <p>Wind : {props.data.windspeed}km/h</p>
         </div>
