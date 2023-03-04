@@ -4,12 +4,17 @@ import "./Weather.css";
 import background from "./media/cloud.jpg";
 
 export default function Sidebar() {
+  function copyToClipboard(event) {
+    navigator.clipboard.writeText("https://darling-gnome-993b2e.netlify.app/");
+    event.target.innerHTML = "link Copied to clipboard";
+
+    setTimeout(() => (event.target.innerHTML = "📎Share App"), 3000);
+  }
+
   return (
     <div className="Sidebar">
-      <div className="tooltip"></div>
-      {/* tooltip was id before */}
-      <button title="share weather app" id="share">
-        📎Share
+      <button title="share weather app" onClick={copyToClipboard}>
+        📎Share App
       </button>
       <hr />
       <h4>Recent Search</h4>

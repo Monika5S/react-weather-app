@@ -92,8 +92,12 @@ button:hover,
     font-size: 20px;
 }
 
+
+.Weather canvas {
+    margin: 10px auto;
+}
+
 .extra-info {
-    /* width: 45%; */
     padding: 4% 7%;
     margin: 20px auto;
     line-height: 1em;
