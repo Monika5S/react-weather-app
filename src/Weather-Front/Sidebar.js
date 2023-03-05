@@ -17,9 +17,9 @@ export default function Sidebar() {
         📎Share App
       </button>
       <hr />
-      <h4>Recent Search</h4>
-      <div className="recent-search"></div>
-      <hr />
+      {/* <h4>Recent Search</h4>
+      <div className="recent-search">{showHistory()}</div> */}
+      {/* <hr /> */}
       <div
         className="extra-info credit"
         style={{ backgroundImage: `url(${background})` }}

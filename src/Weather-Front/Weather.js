@@ -12,7 +12,7 @@ export default function Weather() {
 
   function handleResponse(response) {
     setLoaded(true);
-    console.log(response.data);
+    // console.log(response.data);
     setWeatherData({
       coordinates: response.data.coord,
       cityname: response.data.name,

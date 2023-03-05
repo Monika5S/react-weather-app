@@ -47,12 +47,12 @@
 
 @media screen and (max-width: 1100px) {
 
-    .extra-info,
-    .temperature {
+    .WeatherInfo .extra-info,
+    .WeatherInfo .temperature {
         width: 100%;
     }
 
-    .overview {
+    .WeatherInfo .overview {
         padding: 10px;
     }
 }
