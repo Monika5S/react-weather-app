@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Dna } from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 
 export default function Weather() {
@@ -11,7 +12,9 @@ export default function Weather() {
 
   function handleResponse(response) {
     setLoaded(true);
+    console.log(response.data);
     setWeatherData({
+      coordinates: response.data.coord,
       cityname: response.data.name,
       temperature: Math.round(response.data.main.temp),
       description: response.data.weather[0].description,
@@ -23,9 +26,9 @@ export default function Weather() {
   }
 
   function search() {
-    let id = "e830c41cfe2d651a12717840a22adf28";
+    let apiKey = "ce144f0cf51fa43f03431f0488a36728";
     let unit = "metric";
-    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${id}&units=${unit}`;
+    let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${unit}`;
     axios.get(url).then(handleResponse);
   }
 
@@ -42,6 +45,18 @@ export default function Weather() {
     setCity(event.target.value);
   }
 
+  function showPositionWeather(position) {
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+    let apiKey = "ce144f0cf51fa43f03431f0488a36728";
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}`;
+    axios.get(url).then(handleResponse);
+  }
+
+  function currentLocationTemperature() {
+    navigator.geolocation.getCurrentPosition(showPositionWeather);
+  }
+
   if (loaded) {
     return (
       <div className="Weather">
@@ -54,15 +69,20 @@ export default function Weather() {
             autoFocus="on"
             onChange={updateCity}
           />
-          <button className="search" title="search">
+          <button className="search" title="search" type="submit">
             🔍
           </button>
-          <button className="locate" title="current temperature">
+          <button
+            className="locate"
+            title="current temperature"
+            onClick={currentLocationTemperature}
+          >
             📍
           </button>
         </form>
 
         <WeatherInfo data={weatherData} />
+        <WeatherForecast data={weatherData.coordinates} />
       </div>
     );
   } else {

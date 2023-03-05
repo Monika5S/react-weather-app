@@ -1,0 +1,25 @@
+.WeatherForecast {
+    width: 100%;
+    background: linear-gradient(109.6deg, rgb(84, 10, 42), rgb(43, 1, 91) 100.2%);
+    border-radius: 0px 13px;
+    padding: 10px 30px;
+    margin-right: 10%;
+    font-family: "Segoe UI";
+    font-weight: 500;
+}
+
+.WeatherForecast .col {
+    background: linear-gradient(109.6deg,
+            rgb(61, 106, 239) 11.2%,
+            rgb(122, 14, 190) 70.2%);
+    border-radius: 30px;
+    padding: 10px 25px;
+    margin: 5px 10px;
+    line-height: 1.3;
+    text-align: center;
+
+}
+
+.WeatherForecastDay .min {
+    opacity: 0.7;
+}

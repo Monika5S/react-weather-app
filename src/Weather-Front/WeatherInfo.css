@@ -1,0 +1,58 @@
+.WeatherInfo .city-weather-data {
+    width: 90%;
+    margin: 5% auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.WeatherInfo .temperature {
+    width: 60%;
+    padding: 10px 5%;
+    border: 2px solid rgb(225, 145, 249);
+    /* box-shadow: 0px 0px 10px rgb(255, 111, 111); */
+    box-shadow: 0px 0px 10px rgb(138, 92, 255);
+}
+
+.WeatherInfo .overview {
+    display: flex;
+    border: solid rgb(199, 176, 255);
+    padding: 0.5em;
+    margin: 2px auto;
+    justify-content: space-around;
+    align-items: center;
+    background: linear-gradient(109.6deg,
+            rgba(252, 186, 186, 0.961),
+            rgb(72, 20, 123) 70.2%);
+}
+
+.WeatherInfo .units {
+    position: relative;
+    top: -15px;
+    font-size: 20px;
+}
+
+.WeatherInfo .extra-info {
+    padding: 4% 7%;
+    margin: 20px auto;
+    line-height: 1em;
+    text-align: center;
+    text-shadow: 0.1em 0.1em 0.1em rgb(157 99 205 / 89%);
+    box-shadow: 0.5em 0.5em #dfd7ff;
+    background: radial-gradient(circle at 14.2% 27.5%,
+            rgb(224, 124, 124),
+            rgb(72, 20, 139) 90%);
+}
+
+
+@media screen and (max-width: 1100px) {
+
+    .extra-info,
+    .temperature {
+        width: 100%;
+    }
+
+    .overview {
+        padding: 10px;
+    }
+}
